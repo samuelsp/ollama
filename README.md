@@ -1,6 +1,6 @@
 # 🌐 Integração com Modelos de Linguagem para Sugestões Personalizadas
 
-Este repositório contém scripts em Python que utilizam a tecnologia de **Modelos de Linguagem de Grande Escala (LLMs)** para fornecer recomendações personalizadas em diferentes contextos. Os scripts usam a biblioteca [LangChain](https://python.langchain.com/) para facilitar o acesso e manipulação das respostas da LLM da [Ollama](https://ollama.com/).
+Este repositório contém scripts em Python que utilizam a tecnologia de **Modelos de Linguagem de Grande Escala (LLMs)** para fornecer recomendações personalizadas em diferentes contextos. Os scripts usam a biblioteca [LangChain](https://python.langchain.com/) para facilitar o acesso e manipulação das respostas de um modelo LLM da [Ollama](https://ollama.com/).
 
 ## 📚 O que são LLMs?
 
