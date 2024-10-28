@@ -1,10 +1,10 @@
 # 🌐 Integração com Modelos de Linguagem para Sugestões Personalizadas
 
-Este repositório contém scripts em Python que utilizam a tecnologia de **Modelos de Linguagem de Grande Escala (LLMs)** para fornecer recomendações personalizadas em diferentes contextos. Os scripts usam a biblioteca [LangChain](https://python.langchain.com/) para facilitar o acesso e manipulação das respostas do modelo LLM [llama3.2]([https://ollama.com/](https://ollama.com/library/llama3.2)).
+Este repositório contém scripts em Python que utilizam a tecnologia de **Modelos de Linguagem de Grande Escala (LLMs)** para fornecer recomendações personalizadas em diferentes contextos. Os scripts usam a biblioteca [LangChain](https://python.langchain.com/) para facilitar o acesso e manipulação das respostas da LLM da [Ollama](https://ollama.com/).
 
 ## 📚 O que são LLMs?
 
-LLMs (Large Language Models) são modelos de inteligência artificial projetados para processar e gerar linguagem natural. Eles conseguem interpretar e responder a uma variedade de solicitações complexas, como responder perguntas, traduzir idiomas, sugerir recomendações e muito mais. No contexto deste repositório, estamos utilizando um LLM para responder a perguntas com base em inputs (prompts) específicos fornecidos pelo usuário.
+LLMs (Large Language Models) são modelos de inteligência artificial projetados para processar e gerar linguagem natural. Eles conseguem interpretar e responder a uma variedade de solicitações complexas, como responder perguntas, traduzir idiomas, sugerir recomendações e muito mais. No contexto deste repositório, estamos utilizando um LLM da Ollama para responder a perguntas com base em inputs específicos fornecidos pelo usuário.
 
 ## 📋 Sobre os Scripts
 
@@ -13,14 +13,16 @@ Este repositório possui duas funcionalidades principais:
 1. **Sugestões de vestimenta e alimentação** com base nas condições climáticas de uma cidade (usando a API OpenWeather).
 2. **Sugestões de receitas** com base nas preferências alimentares e nível de experiência do usuário.
 
-Cada script aproveita o poder dos LLMs da para criar respostas personalizadas e contextuais em português.
+Cada script aproveita o poder dos LLMs da Ollama para criar respostas personalizadas e contextuais em português.
+
+> **Nota:** Para o funcionamento dos scripts, é necessário que o modelo LLM esteja **baixado e rodando localmente** na máquina do usuário. Isso garante que o acesso e o processamento das informações sejam feitos de maneira rápida e sem dependência de servidores externos.
 
 ## 📦 Bibliotecas Utilizadas
 
 - **LangChain**: Biblioteca para criação de fluxos e integração com modelos de linguagem.
 - **Requests**: Utilizada para chamadas HTTP, como a API OpenWeather.
 - **Python-dotenv**: Para carregar variáveis de ambiente de forma segura.
-- **LLM da Ollama**: Modelo de linguagem utilizado para gerar as respostas baseadas em prompts e contexto fornecido.
+- **llama3.2**: Modelo de linguagem utilizado para gerar as respostas baseadas em prompts e contexto fornecido.
 
 ### Instalação das Dependências
 
@@ -34,7 +36,7 @@ pip install langchain_ollama requests python-dotenv
 
 1. **Clone este repositório** e navegue até a pasta do projeto:
    ```bash
-   git clone https://github.com/seu_usuario/nome_do_repositorio.git
+   git clone https://github.com/samuelsp/ollama.git
    cd nome_do_repositorio
    ```
 
@@ -46,11 +48,13 @@ pip install langchain_ollama requests python-dotenv
    WEATHER_API_KEY="YOUR_WEATHER_API_KEY"
    ```
 
+3. **Certifique-se de que o modelo LLM está baixado e rodando localmente**. Consulte a documentação da [Ollama](https://ollama.com/library/llama3.2) para configurar e iniciar o modelo em sua máquina.
+
 ## 🧑‍💻 Utilização dos Scripts
 
 ### 1. Sugestão de Vestimenta e Alimentação com Base no Clima
 
-O script `weather.py` consulta a API OpenWeather e utiliza a LLM para fornecer recomendações de vestimenta e alimentação com base nas condições climáticas atuais de uma cidade.
+O script `weather.py` consulta a API OpenWeather e utiliza a LLM da Ollama para fornecer recomendações de vestimenta e alimentação com base nas condições climáticas atuais de uma cidade.
 
 Para executar o script:
 
@@ -95,15 +99,14 @@ Sugiro um prato simples de tofu com espinafre refogado e arroz. Esse prato vegan
 
 ## 🔧 Estrutura do Projeto
 
-- `weather.py`: Script para recomendações de vestimenta e alimentação com base nas condições climáticas.
-- `recipes.py`: Script para sugestões de receitas baseadas em preferências alimentares e nível de experiência.
+- `main_weather.py`: Script para recomendações de vestimenta e alimentação com base nas condições climáticas.
+- `main_recipe.py`: Script para sugestões de receitas baseadas em preferências alimentares e nível de experiência.
 - `.env`: Arquivo para armazenar a chave de API da OpenWeather de forma segura.
-
 
 ## 🔗 Recursos Adicionais
 
 - [Documentação LangChain](https://python.langchain.com/)
-- [API da Ollama](https://ollama.com/api)
+- [Ollama](https://ollama.com/download)
 - [API OpenWeather](https://openweathermap.org/api)
 
 ## 🤝 Contribuição
@@ -113,4 +116,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues, enviar P
 ## 📜 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
